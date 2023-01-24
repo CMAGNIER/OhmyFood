@@ -1,0 +1,32 @@
+@mixin light-typography{
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+@mixin medium-typography{
+    font-size: 0.7rem;
+    font-weight:600;
+}
+
+@mixin large-typography{
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+@mixin btn{
+    padding: 5px 10px;
+    height: 30px;
+    background-color: $btn-color;
+    border-radius: 15px;
+    border: none;
+    font-size: 0.6rem;
+}
+
+@mixin btn-a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+@mixin shadow{
+    box-shadow: 4px 4px 10px -5px $dark-main-color;
+}

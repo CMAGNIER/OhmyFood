@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -14,7 +14,6 @@ header i {
   top: 15px;
   font-size: 1rem;
 }
-
 header .logo {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
@@ -23,4 +22,57 @@ header .logo {
   height: 50px;
   line-height: 50px;
   font-size: 1.4rem;
+}
+
+.location {
+  text-align: center;
+  margin: 0;
+  height: 35px;
+  background-color: #E5DEDE;
+  line-height: 35px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #5f4b4b;
+  box-shadow: inset 0px 6px 5px -6px #5f4b4b;
+}
+.location i {
+  color: #5f4b4b;
+  margin-right: 7px;
+  font-size: 0.8rem;
+}
+
+.discovery {
+  align-items: center;
+  background-color: #f5f2f2;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.discovery .discovery_heading {
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 5px 30px;
+}
+.discovery .discovery_paragraph {
+  text-align: center;
+  margin: 5px 25px;
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+.discovery .discovery_btn {
+  padding: 5px 10px;
+  height: 30px;
+  background-color: #DF6FED;
+  border-radius: 15px;
+  border: none;
+  font-size: 0.6rem;
+  box-shadow: 4px 4px 10px -5px #5f4b4b;
+  width: 130px;
+  margin: 5px 0px;
+}
+.discovery .discovery_btn a {
+  text-decoration: none;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */
