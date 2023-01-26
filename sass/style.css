@@ -16,12 +16,37 @@ header i {
 }
 header .logo {
   font-family: "Shrikhand", cursive;
-  font-weight: bold;
   text-align: center;
   margin: 0;
-  height: 50px;
   line-height: 50px;
   font-size: 1.4rem;
+}
+
+footer {
+  background-color: #5f4b4b;
+  color: #FFFFFF;
+  padding: 10px 20px;
+}
+footer .logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 0.9rem;
+  margin: 10px 0px;
+}
+footer p {
+  margin: 10px 0px;
+  line-height: 20px;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+footer p i {
+  margin-right: 10px;
+}
+footer p .fa-handshake-angle {
+  font-size: 0.6rem;
+}
+footer p a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .location {

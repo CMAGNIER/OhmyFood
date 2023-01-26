@@ -6,11 +6,9 @@ header{
         font-size: 1rem; 
     }
     .logo{
-    font-family: "Shrikhand", cursive;
-    font-weight: bold;
+    @include logo-font-family;
     text-align: center;
     margin: 0;
-    height: 50px;
     line-height: 50px;
     font-size: 1.4rem;
     }
