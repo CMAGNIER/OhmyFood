@@ -3,7 +3,11 @@ header{
         position: absolute;
         left: 20px;
         top: 15px;
-        font-size: 1rem; 
+        font-size: 1rem;
+        color: #000000;
+        &:active{
+            color:#000000;
+        }
     }
     .logo{
     @include logo-font-family;
