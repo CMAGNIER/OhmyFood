@@ -34,7 +34,6 @@
     .discovery_btn{
         @include btn;
         @include shadow;
-        width: 130px;
         margin: 5px 0px;
         a{
             @include btn-a;

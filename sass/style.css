@@ -8,12 +8,6 @@ body {
   box-sizing: border-box;
 }
 
-header i {
-  position: absolute;
-  left: 20px;
-  top: 15px;
-  font-size: 1rem;
-}
 header .logo {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -21,20 +15,30 @@ header .logo {
   line-height: 50px;
   font-size: 1.4rem;
 }
+header .logo i {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 1rem;
+  color: #000000;
+}
+header .logo i:active {
+  color: #000000;
+}
 
 footer {
-  background-color: #5f4b4b;
+  background-color: #2c2323;
   color: #FFFFFF;
   padding: 10px 20px;
 }
 footer .logo {
   font-family: "Shrikhand", cursive;
   font-size: 0.9rem;
-  margin: 10px 0px;
+  margin: 10px 0px 15px 0px;
 }
 footer p {
   margin: 10px 0px;
-  line-height: 20px;
+  line-height: 23px;
   font-size: 0.8rem;
   font-weight: 100;
 }
@@ -88,7 +92,7 @@ footer p a {
 }
 .discovery .discovery_btn {
   padding: 12px 25px;
-  background-color: #DF6FED;
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 20px;
   border: none;
   font-size: 0.8rem;
@@ -280,7 +284,7 @@ footer p a {
 }
 .menu .card .card_btn {
   padding: 12px 25px;
-  background-color: #DF6FED;
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 20px;
   border: none;
   font-size: 0.8rem;

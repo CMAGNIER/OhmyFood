@@ -19,7 +19,7 @@
 
 @mixin btn{
     padding: 12px 25px;
-    background-color: $btn-color;
+    background: linear-gradient($color-secondary,$color-primary);
     border-radius: 20px;
     border: none;
     font-size: 0.8rem;

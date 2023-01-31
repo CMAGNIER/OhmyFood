@@ -1,19 +1,19 @@
 header{
-    i{
-        position: absolute;
-        left: 20px;
-        top: 15px;
-        font-size: 1rem;
-        color: #000000;
-        &:active{
-            color:#000000;
-        }
-    }
     .logo{
-    @include logo-font-family;
-    text-align: center;
-    margin: 0;
-    line-height: 50px;
-    font-size: 1.4rem;
+        @include logo-font-family;
+        text-align: center;
+        margin: 0;
+        line-height: 50px;
+        font-size: 1.4rem;
+        i{
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            font-size: 1rem;
+            color: #000000;
+            &:active{
+                color:#000000;
+            }
+        }
     }
 }
