@@ -1,0 +1,80 @@
+.menu{
+    background-color: $light-main-color;
+    .restaurant-picture{
+        width: 100%;
+        object-fit: cover;
+    }
+    .card{
+        border-radius: 20px 20px 0px 0px;
+        background-color: $light-main-color;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -40px;
+        .card_heading{
+            padding: 30px 15px 0px 15px;
+            margin: 0;
+            @include logo-font-family;
+            font-size:1.4rem;
+            position: relative;
+            i{
+                color: $dark-main-color;
+                position: absolute;
+                right: 33px;
+                top: 35px;
+
+            }
+        }
+        .card_content{
+            h3{
+                margin: 25px 15px 3px 15px;
+                font-weight: 200;
+                font-size: 0.9rem;
+            }
+            .underline{
+                width: 35px;
+                height: 3px;
+                margin: 0px 0px 0px 15px;
+                background-color: $color-tertiary;
+            } 
+            ul{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                li{
+                    list-style-type: none;
+                    line-height: 25px;
+                    margin: 7px 15px;
+                    padding: 7px 12px;
+                    border-radius: 15px;
+                    background-color: #FFFFFF;
+                    @include shadow;
+                    h4{
+                        @include medium-typography;
+                        margin: 0;
+                    }
+                    p{
+                        @include light-typography;
+                        margin: 0;
+                        position: relative;
+                        .price{
+                            font-weight: bold;
+                            position: absolute;
+                            right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+        .card_btn{
+            @include btn;
+            @include shadow;
+            margin: auto;
+            margin-top: 35px;
+            a{
+                @include btn-a;
+            }
+        }
+    }
+}
