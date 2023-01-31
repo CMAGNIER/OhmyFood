@@ -1,15 +1,15 @@
 footer{
-    background-color: $dark-main-color;
+    background-color: darken($dark-main-color,18%);
     color: #FFFFFF;
     padding: 10px 20px;
     .logo{
         @include logo-font-family;
         font-size: 0.9rem;
-        margin: 10px 0px;
+        margin: 10px 0px 15px 0px;
     }
     p{
         margin: 10px 0px;
-        line-height: 20px;
+        line-height: 23px;
         @include light-typography;
         i{
             margin-right: 10px;
