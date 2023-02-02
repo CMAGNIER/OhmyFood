@@ -2,6 +2,9 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+  min-width: 320px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 * {
@@ -14,6 +17,7 @@ header .logo {
   margin: 0;
   line-height: 50px;
   font-size: 1.4rem;
+  position: relative;
 }
 header .logo i {
   position: absolute;
@@ -30,6 +34,11 @@ footer {
   background-color: #2c2323;
   color: #FFFFFF;
   padding: 10px 20px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
 }
 footer .logo {
   font-family: "Shrikhand", cursive;
@@ -112,11 +121,23 @@ footer p a {
   font-weight: 900;
   margin: 10px 0px;
 }
+@media screen and (min-width: 768px) {
+  .functioning .functioning_heading {
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+  }
+}
 .functioning ul {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .functioning ul {
+    align-items: center;
+    gap: 10px;
+  }
 }
 .functioning ul li {
   list-style-type: none;
@@ -128,6 +149,17 @@ footer p a {
   background-color: #f5f2f2;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .functioning ul li {
+    width: 50%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functioning ul li {
+    width: 60%;
+  }
 }
 .functioning ul li .circle {
   color: #9356DC;
@@ -148,6 +180,11 @@ footer p a {
   color: #7c6262;
   font-size: 0.9rem;
 }
+@media screen and (min-width: 768px) {
+  .functioning ul li .icon {
+    margin: 0px 3px 0px 0px;
+  }
+}
 
 .restaurant-menu {
   padding: 30px 20px;
@@ -158,15 +195,38 @@ footer p a {
   font-weight: 900;
   margin: 10px 0px;
 }
+@media screen and (min-width: 768px) {
+  .restaurant-menu .restaurant-menu_heading {
+    margin: 10px 0px 20px 0px;
+  }
+}
 .restaurant-menu .restaurant-menu_content {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-menu .restaurant-menu_content {
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: row;
+  }
 }
 .restaurant-menu .restaurant-menu_content article {
   margin: 10px 0px;
   border-radius: 15px;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-menu .restaurant-menu_content article {
+    margin: 10px;
+    flex: 1 1 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant-menu .restaurant-menu_content article {
+    flex: 1 1 20%;
+  }
 }
 .restaurant-menu .restaurant-menu_content article a {
   text-decoration: none;
@@ -219,11 +279,14 @@ footer p a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 768px) {
+  .menu .restaurant-picture {
+    height: 450px;
+  }
+}
 .menu .card {
   border-radius: 20px 20px 0px 0px;
   background-color: #f5f2f2;
-  display: flex;
-  flex-direction: column;
   position: relative;
   top: -40px;
 }
@@ -234,28 +297,57 @@ footer p a {
   font-size: 1.4rem;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .menu .card .card_heading {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
 .menu .card .card_heading i {
   color: #5f4b4b;
   position: absolute;
   right: 33px;
   top: 35px;
 }
+@media screen and (min-width: 768px) {
+  .menu .card .card_heading i {
+    position: initial;
+    margin-left: 20px;
+  }
+}
 .menu .card .card_content h3 {
-  margin: 25px 15px 3px 15px;
+  margin: 25px 15px 0px 15px;
   font-weight: 200;
   font-size: 0.9rem;
+}
+@media screen and (min-width: 768px) {
+  .menu .card .card_content h3 {
+    text-align: center;
+  }
 }
 .menu .card .card_content .underline {
   width: 35px;
   height: 3px;
-  margin: 0px 0px 0px 15px;
+  margin: 6px 0px 10px 15px;
   background-color: #99E2D0;
+}
+@media screen and (min-width: 768px) {
+  .menu .card .card_content .underline {
+    margin: auto;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
 }
 .menu .card .card_content ul {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .menu .card .card_content ul {
+    align-items: center;
+  }
 }
 .menu .card .card_content ul li {
   list-style-type: none;
@@ -265,6 +357,16 @@ footer p a {
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
+}
+@media screen and (min-width: 768px) {
+  .menu .card .card_content ul li {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu .card .card_content ul li {
+    width: 60%;
+  }
 }
 .menu .card .card_content ul li h4 {
   font-size: 0.8rem;
@@ -289,6 +391,7 @@ footer p a {
   border: none;
   font-size: 0.8rem;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
+  display: block;
   margin: auto;
   margin-top: 35px;
 }

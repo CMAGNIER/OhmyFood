@@ -33,3 +33,15 @@
 @mixin shadow{
     box-shadow: 4px 4px 10px -5px $dark-main-color;
 }
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}

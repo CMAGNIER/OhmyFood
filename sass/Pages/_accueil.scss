@@ -46,12 +46,20 @@
     .functioning_heading{
         @include large-typography;
         margin: 10px 0px;
+        @include tablet-only{
+            margin: 10px 0px 20px 0px;
+            text-align: center;
+        }
     }
     ul{
         display: flex;
         flex-direction: column;
         padding: 0;
         margin: 0;
+        @include tablet-only{
+            align-items: center;
+            gap: 10px;
+        }
         li{
             list-style-type: none;
             padding: 17px;
@@ -61,6 +69,13 @@
             background-color: $light-main-color;
             @include shadow;
             position: relative;
+            @include tablet-only{
+                width: 50%;
+                text-align: center;
+            }
+            @include desktop-only{
+                width: 60%;
+            }
             .circle{
                 color: $color-primary;
                 font-size: 1.2rem;
@@ -79,6 +94,9 @@
                 margin: 0px 10px;
                 color: lighten($dark-main-color,10%);
                 font-size: 0.9rem;
+                @include tablet-only{
+                    margin: 0px 3px 0px 0px;
+                }
             }
         }
     }   
@@ -90,15 +108,30 @@
     .restaurant-menu_heading{
         @include large-typography;
         margin: 10px 0px;
+        @include tablet-only{
+            margin: 10px 0px 20px 0px;
+        }
     }
     .restaurant-menu_content{
         display: flex;
         flex-direction: column;
+        @include tablet-only{
+            flex-wrap: wrap;
+            gap: 15px;
+            flex-direction: row;
+        }
         article{
             margin: 10px 0px;
             border-radius: 15px;
             @include shadow;
             position: relative;
+            @include tablet-only{
+                margin: 10px;
+                flex: 1 1 40%;
+            }
+            @include desktop-only{
+                flex: 1 1 20%;
+            }
             a{
                 text-decoration: none;
                 color: #000000;

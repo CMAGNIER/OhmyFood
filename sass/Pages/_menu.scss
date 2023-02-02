@@ -3,12 +3,13 @@
     .restaurant-picture{
         width: 100%;
         object-fit: cover;
+        @include tablet-only{
+            height: 450px;
+        }
     }
     .card{
         border-radius: 20px 20px 0px 0px;
         background-color: $light-main-color;
-        display: flex;
-        flex-direction: column;
         position: relative;
         top: -40px;
         .card_heading{
@@ -17,31 +18,49 @@
             @include logo-font-family;
             font-size:1.4rem;
             position: relative;
+            @include tablet-only{
+                text-align: center;
+                padding-bottom: 20px;
+            }
             i{
                 color: $dark-main-color;
                 position: absolute;
                 right: 33px;
                 top: 35px;
-
+                @include tablet-only{
+                    position: initial;
+                    margin-left: 20px;
+                }
             }
         }
         .card_content{
             h3{
-                margin: 25px 15px 3px 15px;
+                margin: 25px 15px 0px 15px;
                 font-weight: 200;
                 font-size: 0.9rem;
+                @include tablet-only{
+                    text-align: center;
+                }
             }
             .underline{
                 width: 35px;
                 height: 3px;
-                margin: 0px 0px 0px 15px;
+                margin: 6px 0px 10px 15px;
                 background-color: $color-tertiary;
+                @include tablet-only{
+                    margin: auto;
+                    margin-top: 6px;
+                    margin-bottom: 10px;
+                }
             } 
             ul{
                 display: flex;
                 flex-direction: column;
                 padding: 0;
                 margin: 0;
+                @include tablet-only{
+                    align-items: center;
+                }
                 li{
                     list-style-type: none;
                     line-height: 25px;
@@ -50,6 +69,12 @@
                     border-radius: 15px;
                     background-color: #FFFFFF;
                     @include shadow;
+                    @include tablet-only{
+                        width: 70%;
+                    }
+                    @include desktop-only{
+                        width: 60%;
+                    }
                     h4{
                         @include medium-typography;
                         margin: 0;
@@ -70,6 +95,7 @@
         .card_btn{
             @include btn;
             @include shadow;
+            display: block;
             margin: auto;
             margin-top: 35px;
             a{

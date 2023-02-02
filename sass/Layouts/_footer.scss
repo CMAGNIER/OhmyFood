@@ -2,6 +2,9 @@ footer{
     background-color: darken($dark-main-color,18%);
     color: #FFFFFF;
     padding: 10px 20px;
+    @include tablet-only{
+        text-align: center;
+    }
     .logo{
         @include logo-font-family;
         font-size: 0.9rem;
