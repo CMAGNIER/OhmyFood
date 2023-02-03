@@ -35,7 +35,7 @@
         }
         .card_content{
             h3{
-                margin: 25px 15px 0px 15px;
+                margin: 30px 15px 0px 15px;
                 font-weight: 200;
                 font-size: 0.9rem;
                 @include tablet-only{
@@ -45,7 +45,7 @@
             .underline{
                 width: 35px;
                 height: 3px;
-                margin: 6px 0px 10px 15px;
+                margin: 5px 0px 12px 15px;
                 background-color: $color-tertiary;
                 @include tablet-only{
                     margin: auto;
@@ -56,15 +56,15 @@
             ul{
                 display: flex;
                 flex-direction: column;
-                padding: 0;
+                padding: 0px 15px;
                 margin: 0;
+                gap: 13px;
                 @include tablet-only{
                     align-items: center;
                 }
                 li{
                     list-style-type: none;
                     line-height: 25px;
-                    margin: 7px 15px;
                     padding: 7px 12px;
                     border-radius: 15px;
                     background-color: #FFFFFF;

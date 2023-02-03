@@ -17,24 +17,24 @@
 .discovery{
     align-items: center;
     background-color: $light-main-color;
-    height: 170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 30px;
+    gap: 20px;
     .discovery_heading{
         @include large-typography;
+        margin: 0px 30px;
         text-align: center;
-        margin: 5px 30px;
     }
     .discovery_paragraph{
-        text-align: center;
-        margin : 5px 25px;
         @include light-typography;
+        margin: 0;
+        text-align: center;
     }
     .discovery_btn{
         @include btn;
         @include shadow;
-        margin: 5px 0px;
         a{
             @include btn-a;
         }
@@ -42,12 +42,11 @@
 }
 
 .functioning{
-    padding: 30px 20px;
+    padding: 35px 20px;
     .functioning_heading{
         @include large-typography;
-        margin: 10px 0px;
+        margin: 0px 0px 20px 0px;
         @include tablet-only{
-            margin: 10px 0px 20px 0px;
             text-align: center;
         }
     }
@@ -56,14 +55,14 @@
         flex-direction: column;
         padding: 0;
         margin: 0;
+        gap: 13px;
         @include tablet-only{
             align-items: center;
-            gap: 10px;
+            gap: 20px;
         }
         li{
             list-style-type: none;
             padding: 17px;
-            margin: 7px 0px;
             border-radius: 15px;
             @include medium-typography;
             background-color: $light-main-color;
@@ -103,30 +102,26 @@
 }
 
 .restaurant-menu{
-    padding: 30px 20px;
+    padding: 35px 20px;
     background-color: $light-main-color;
     .restaurant-menu_heading{
         @include large-typography;
-        margin: 10px 0px;
-        @include tablet-only{
-            margin: 10px 0px 20px 0px;
-        }
+        margin: 0px 0px 20px 0px;
     }
     .restaurant-menu_content{
         display: flex;
         flex-direction: column;
+        gap: 13px;
         @include tablet-only{
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             flex-direction: row;
         }
         article{
-            margin: 10px 0px;
             border-radius: 15px;
             @include shadow;
             position: relative;
             @include tablet-only{
-                margin: 10px;
                 flex: 1 1 40%;
             }
             @include desktop-only{
