@@ -316,14 +316,16 @@ footer p a {
     text-align: center;
   }
 }
-.menu .card .card_content .underline {
+.menu .card .card_content h3::after {
+  content: "";
+  display: block;
   width: 35px;
   height: 3px;
-  margin: 5px 0px 12px 15px;
+  margin: 5px 0px 12px 0px;
   background-color: #99E2D0;
 }
 @media screen and (min-width: 768px) {
-  .menu .card .card_content .underline {
+  .menu .card .card_content h3::after {
     margin: auto;
     margin-top: 6px;
     margin-bottom: 10px;

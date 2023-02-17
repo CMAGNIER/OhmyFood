@@ -41,17 +41,19 @@
                 @include tablet-only{
                     text-align: center;
                 }
-            }
-            .underline{
-                width: 35px;
-                height: 3px;
-                margin: 5px 0px 12px 15px;
-                background-color: $color-tertiary;
-                @include tablet-only{
-                    margin: auto;
-                    margin-top: 6px;
-                    margin-bottom: 10px;
-                }
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 35px;
+                    height: 3px;
+                    margin: 5px 0px 12px 0px;
+                    background-color: $color-tertiary;
+                    @include tablet-only{
+                        margin: auto;
+                        margin-top: 6px;
+                        margin-bottom: 10px;
+                    }
+                }  
             } 
             ul{
                 display: flex;
