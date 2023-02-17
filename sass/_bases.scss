@@ -9,3 +9,26 @@ body{
 *{
     box-sizing: border-box;
 }
+
+@keyframes loading{
+    0%{
+        transform: rotate(0turn);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(1turn);
+        opacity: 0;
+    }
+}
+
+@keyframes charged-load{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

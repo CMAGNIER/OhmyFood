@@ -11,6 +11,27 @@ body {
   box-sizing: border-box;
 }
 
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(1turn);
+    opacity: 0;
+  }
+}
+@keyframes charged-load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 header .logo {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -60,6 +81,28 @@ footer p .fa-handshake-angle {
 footer p a {
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.load {
+  position: fixed;
+  z-index: 1;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: charged-load 0s 3.6s both;
+}
+.load::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 4px solid;
+  border-color: #9356DC #FFFFFF #9356DC #FFFFFF;
+  animation: loading 1.2s ease 3 both;
 }
 
 .location {
