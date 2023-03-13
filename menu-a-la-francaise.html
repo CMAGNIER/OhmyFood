@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="css/prefixed/style.css"> 
         <script src="https://kit.fontawesome.com/9389dccd37.js" crossorigin="anonymous"></script>
         <title>Ohmyfood</title>
     </head>
@@ -17,86 +17,140 @@
         <main class="menu">
             <img class="restaurant-picture" src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="toa-heftiba">
             <section class="card">
-                <h2 class="card_heading">À la française<i class="fa-regular fa-heart"></i></h2>
+                <h2 class="card_heading">
+                    À la française
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </h2>
                 <div class="card_content">
                     <h3>ENTRÉES</h3>
                     <ul>
-                        <li>
-                            <h4>Tartare de poulpe acidulé</h4>
-                            <p>
-                                Aux zestes d'orange 
-                                <span class="price">25€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Tartare de poulpe acidulé</h4>
+                                <p>
+                                Aux zestes d'orange
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                25€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
-                        <li>
-                            <h4>Velouté de légumes d'antan</h4>
-                            <p>
-                                Carotte, panais, topinambour 
-                                <span class="price">35€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Velouté de légumes d'antan</h4>
+                                <p>
+                                    Carotte, panais, topinambour 
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                35€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
-                        <li>
-                            <h4>Soupe à l'oignon</h4>
-                            <p>
-                                Revisitée 
-                                <span class="price">20€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Soupe à l'oignon</h4>
+                                <p>
+                                    Revisitée 
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                20€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
                     </ul>
-                </div>
-                <div class="card_content">
                     <h3>PLATS</h3>
                     <ul>
-                        <li>
-                            <h4>Coquilles Saint-Jacques</h4>
-                            <p>
-                                Accompagnées d'une purée de panais 
-                                <span class="price">40€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Coquilles Saint-Jacques</h4>
+                                <p>
+                                    Accompagnées d'une purée de panais 
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                40€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
-                        <li>
-                            <h4>Magret de canard</h4>
-                            <p>
-                                Et parmentier de pommes de terre 
-                                <span class="price">35€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Magret de canard</h4>
+                                <p>
+                                    Et parmentier de pommes de terre 
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                35€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
-                        <li>
-                            <h4>Pigeonneau d'Ille-et-Vilaine</h4>
-                            <p>
-                                Sur son lit de gnocchis aux légumes 
-                                <span class="price">44€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Pigeonneau d'Ille-et-Vilaine</h4>
+                                <p>
+                                    Sur son lit de gnocchis aux légumes 
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                44€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
                     </ul>
-                </div>
-                <div class="card_content">
                     <h3>DESSERTS</h3>
                     <ul>
-                        <li>
-                            <h4>Pétales de violettes glacés</h4>
-                            <p>
-                                Et purée de noisettes 
-                                <span class="price">18€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Pétales de violettes glacés</h4>
+                                <p>
+                                    Et purée de noisettes
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                18€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
-                        <li>
-                            <h4>Fondant au chocolat</h4>
-                            <p>
-                                Revisité 
-                                <span class="price">22€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Fondant au chocolat</h4>
+                                <p>
+                                    Revisité
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                22€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
-                        <li>
-                            <h4>Millefeuille croustillant</h4>
-                            <p>
-                                Myrtilles et pâte d'amande 
-                                <span class="price">23€</span>
-                            </p>
+                        <li class="card_content_dish">
+                            <div class="card_content_dish_entitled">
+                                <h4>Millefeuille croustillant</h4>
+                                <p>
+                                    Myrtilles et pâte d'amande 
+                                </p>
+                            </div>
+                            <div class="card_content_dish_price">
+                                23€
+                            </div>
+                            <div class="card_content_dish--select"></div>
+                            <i class="fa-solid fa-circle-check"></i>
                         </li>
                     </ul>
                 </div>
-                <button  class="card_btn"><a href="#">Commander</a></button>
+                <div  class="card_btn"><a href="#">Commander</a></div>
             </section>   
         </main>
         <footer>

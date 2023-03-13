@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
   min-width: 320px;
   max-width: 1400px;
   margin: auto;
@@ -31,6 +30,35 @@ body {
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+@keyframes completed {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateY(7px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(4px);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
   }
 }
 header .logo {
@@ -88,6 +116,7 @@ footer p a {
   position: fixed;
   z-index: 1;
   background-color: #FFFFFF;
+  max-width: 1400px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -106,7 +135,7 @@ footer p a {
   animation: loading 1.2s ease 3 both;
 }
 
-.location {
+.search .search_position {
   text-align: center;
   margin: 0;
   height: 35px;
@@ -117,13 +146,12 @@ footer p a {
   color: #5f4b4b;
   box-shadow: inset 0px 6px 5px -6px #5f4b4b;
 }
-.location i {
+.search .search_position i {
   color: #5f4b4b;
   margin-right: 7px;
   font-size: 0.8rem;
 }
-
-.discovery {
+.search .search_discovery {
   align-items: center;
   background-color: #f5f2f2;
   display: flex;
@@ -132,19 +160,19 @@ footer p a {
   padding: 30px;
   gap: 20px;
 }
-.discovery .discovery_heading {
+.search .search_discovery .search_discovery_heading {
   font-size: 1.1rem;
   font-weight: 900;
   margin: 0px 30px;
   text-align: center;
 }
-.discovery .discovery_paragraph {
+.search .search_discovery .search_discovery_paragraph {
   font-size: 0.8rem;
   font-weight: 100;
   margin: 0;
   text-align: center;
 }
-.discovery .discovery_btn {
+.search .search_discovery .search_discovery_btn {
   padding: 12px 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 20px;
@@ -152,7 +180,12 @@ footer p a {
   font-size: 0.8rem;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
 }
-.discovery .discovery_btn a {
+.search .search_discovery .search_discovery_btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 4px 4px 10px -5px black;
+  transition: all 0.3s ease-in;
+}
+.search .search_discovery .search_discovery_btn a {
   text-decoration: none;
   color: #FFFFFF;
 }
@@ -170,7 +203,7 @@ footer p a {
     text-align: center;
   }
 }
-.functioning ul {
+.functioning .functioning_content {
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -178,12 +211,12 @@ footer p a {
   gap: 13px;
 }
 @media screen and (min-width: 768px) {
-  .functioning ul {
+  .functioning .functioning_content {
     align-items: center;
     gap: 20px;
   }
 }
-.functioning ul li {
+.functioning .functioning_content li {
   list-style-type: none;
   padding: 17px;
   border-radius: 15px;
@@ -194,37 +227,41 @@ footer p a {
   position: relative;
 }
 @media screen and (min-width: 768px) {
-  .functioning ul li {
+  .functioning .functioning_content li {
     width: 50%;
     text-align: center;
   }
 }
 @media screen and (min-width: 1024px) {
-  .functioning ul li {
+  .functioning .functioning_content li {
     width: 60%;
   }
 }
-.functioning ul li .circle {
+.functioning .functioning_content li .functioning_content_circle {
   color: #9356DC;
   font-size: 1.2rem;
   position: absolute;
   left: -10px;
   top: 15px;
 }
-.functioning ul li .number {
+.functioning .functioning_content li .functioning_content_number {
   color: #FFFFFF;
   font-size: 0.5rem;
   position: absolute;
   left: -2.5px;
   top: 21px;
 }
-.functioning ul li .icon {
+.functioning .functioning_content li .functioning_content_icon {
   margin: 0px 10px;
   color: #7c6262;
   font-size: 0.9rem;
 }
+.functioning .functioning_content li .functioning_content_icon:hover {
+  color: #9356DC;
+  transition: 0.2s ease-in;
+}
 @media screen and (min-width: 768px) {
-  .functioning ul li .icon {
+  .functioning .functioning_content li .functioning_content_icon {
     margin: 0px 3px 0px 0px;
   }
 }
@@ -299,12 +336,21 @@ footer p a {
   font-weight: 100;
   margin: 5px 10px 10px 10px;
 }
-.restaurant-menu .restaurant-menu_content article a i {
+.restaurant-menu .restaurant-menu_content article i {
   color: #5f4b4b;
   position: absolute;
   right: 20px;
   top: 175px;
   font-size: 1.1rem;
+}
+.restaurant-menu .restaurant-menu_content article .fa-solid {
+  background: linear-gradient(177deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+}
+.restaurant-menu .restaurant-menu_content article .fa-regular:active + .fa-solid {
+  animation: completed 1s ease both;
 }
 
 .menu {
@@ -344,11 +390,14 @@ footer p a {
   right: 33px;
   top: 35px;
 }
-@media screen and (min-width: 768px) {
-  .menu .card .card_heading i {
-    position: initial;
-    margin-left: 20px;
-  }
+.menu .card .card_heading .fa-solid {
+  background: linear-gradient(177deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(0);
+}
+.menu .card .card_heading .fa-regular:active + .fa-solid {
+  animation: completed 1s ease both;
 }
 .menu .card .card_content h3 {
   margin: 30px 15px 0px 15px;
@@ -387,39 +436,93 @@ footer p a {
     align-items: center;
   }
 }
-.menu .card .card_content ul li {
+.menu .card .card_content ul .card_content_dish {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
   list-style-type: none;
-  line-height: 25px;
-  padding: 7px 12px;
   border-radius: 15px;
   background-color: #FFFFFF;
+  cursor: pointer;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
 }
 @media screen and (min-width: 768px) {
-  .menu .card .card_content ul li {
+  .menu .card .card_content ul .card_content_dish {
     width: 70%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu .card .card_content ul li {
+  .menu .card .card_content ul .card_content_dish {
     width: 60%;
   }
 }
-.menu .card .card_content ul li h4 {
+.menu .card .card_content ul .card_content_dish:nth-child(1) {
+  animation: appearance 0.4s 0.1s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
+}
+.menu .card .card_content ul .card_content_dish:nth-child(2) {
+  animation: appearance 0.4s 0.3s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
+}
+.menu .card .card_content ul .card_content_dish:nth-child(3) {
+  animation: appearance 0.4s 0.5s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
+}
+.menu .card .card_content ul .card_content_dish .card_content_dish_entitled {
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu .card .card_content ul .card_content_dish .card_content_dish_entitled h4 {
   font-size: 0.8rem;
   font-weight: 600;
-  margin: 0;
+  margin: 10px 10px 4px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.menu .card .card_content ul li p {
+.menu .card .card_content ul .card_content_dish .card_content_dish_entitled p {
   font-size: 0.8rem;
   font-weight: 100;
-  margin: 0;
-  position: relative;
+  margin: 4px 10px 10px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.menu .card .card_content ul li p .price {
-  font-weight: bold;
+.menu .card .card_content ul .card_content_dish .card_content_dish_price {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 35px 18px 7px 18px;
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+.menu .card .card_content ul .card_content_dish:active > .card_content_dish_price {
+  transform: translateX(-50px);
+  margin-left: 50px;
+}
+.menu .card .card_content ul .card_content_dish .card_content_dish--select {
+  width: 50px;
+  height: 58px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99E2D0;
   position: absolute;
-  right: 7px;
+  z-index: -1;
+  right: 0px;
+  transform: translateX(calc(100% + 5px));
+  transition: transform 0.5s ease;
+}
+.menu .card .card_content ul .card_content_dish:active > .card_content_dish--select {
+  transform: translateX(0);
+}
+.menu .card .card_content ul .card_content_dish i {
+  color: #FFFFFF;
+  margin: 21px 17px;
+  position: absolute;
+  right: 0px;
+  transform: translateX(calc(100% + 25px)) rotate(0turn);
+  transition: transform 0.5s ease;
+}
+.menu .card .card_content ul .card_content_dish:active > i {
+  transform: translateX(0) rotate(1turn);
 }
 .menu .card .card_btn {
   padding: 12px 25px;
@@ -428,9 +531,15 @@ footer p a {
   border: none;
   font-size: 0.8rem;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
-  display: block;
+  width: 150px;
+  text-align: center;
   margin: auto;
   margin-top: 35px;
+}
+.menu .card .card_btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 4px 4px 10px -5px black;
+  transition: all 0.3s ease-in;
 }
 .menu .card .card_btn a {
   text-decoration: none;

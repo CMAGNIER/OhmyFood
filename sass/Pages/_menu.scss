@@ -27,9 +27,18 @@
                 position: absolute;
                 right: 33px;
                 top: 35px;
-                @include tablet-only{
-                    position: initial;
-                    margin-left: 20px;
+            }
+            .fa-solid{
+                background: linear-gradient(177deg,$color-primary,$color-secondary);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(0);
+            }
+            .fa-regular{
+                &:active{
+                    & + .fa-solid{
+                        animation: completed 1s ease both;
+                    }
                 }
             }
         }
@@ -64,12 +73,15 @@
                 @include tablet-only{
                     align-items: center;
                 }
-                li{
+                .card_content_dish{
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    overflow: hidden;
                     list-style-type: none;
-                    line-height: 25px;
-                    padding: 7px 12px;
                     border-radius: 15px;
                     background-color: #FFFFFF;
+                    cursor: pointer;
                     @include shadow;
                     @include tablet-only{
                         width: 70%;
@@ -77,18 +89,74 @@
                     @include desktop-only{
                         width: 60%;
                     }
-                    h4{
-                        @include medium-typography;
-                        margin: 0;
+                    &:nth-child(1){
+                        animation: appearance 0.4s 0.1s cubic-bezier(.69,.67,.82,.81) both;
                     }
-                    p{
-                        @include light-typography;
-                        margin: 0;
-                        position: relative;
-                        .price{
-                            font-weight: bold;
-                            position: absolute;
-                            right: 7px;
+                    &:nth-child(2){
+                        animation: appearance 0.4s 0.3s cubic-bezier(.69,.67,.82,.81) both;
+                    }
+                    &:nth-child(3){
+                        animation: appearance 0.4s 0.5s cubic-bezier(.69,.67,.82,.81) both;
+                    }
+                    .card_content_dish_entitled{
+                        display: flex;
+                        flex-direction: column;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        h4{
+                            @include medium-typography;
+                            margin: 10px 10px 4px 10px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        p{
+                            @include light-typography;
+                            margin: 4px 10px 10px 10px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                    }
+                    .card_content_dish_price{
+                        @include medium-typography;
+                        margin: 35px 18px 7px 18px;
+                        transform: translateX(0);
+                        transition: all 0.5s;
+                    }
+                    &:active{
+                        & > .card_content_dish_price{
+                            transform: translateX(-50px);
+                            margin-left:50px;
+                        }
+                    }
+                    .card_content_dish--select{
+                        width: 50px;
+                        height: 58px;
+                        border-radius: 0px 15px 15px 0px;
+                        background-color: #99E2D0;
+                        position: absolute;
+                        z-index: -1;
+                        right: 0px;
+                        transform: translateX(calc(100% + 5px));
+                        transition: transform 0.5s ease;
+                    }
+                    &:active{
+                        & > .card_content_dish--select{
+                            transform: translateX(0);
+                        }
+                    }
+                    i{
+                        color: #FFFFFF;
+                        margin: 21px 17px;
+                        position: absolute;
+                        right: 0px;
+                        transform: translateX(calc(100% + 25px)) rotate(0turn);
+                        transition: transform 0.5s ease;
+                    }
+                    &:active{
+                        & > i{
+                            transform: translateX(0) rotate(1turn);
                         }
                     }
                 }
@@ -97,9 +165,15 @@
         .card_btn{
             @include btn;
             @include shadow;
-            display: block;
+            width: 150px;
+            text-align: center;
             margin: auto;
             margin-top: 35px;
+            &:hover{
+                filter: brightness(1.2);
+                box-shadow: 4px 4px 10px -5px darken($dark-main-color,60%);
+                transition: all 0.3s ease-in;
+            }
             a{
                 @include btn-a;
             }
