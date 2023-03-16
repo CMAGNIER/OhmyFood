@@ -24,17 +24,25 @@
 .search{
     .search_position{
         text-align: center;
-        margin: 0;
         height: 35px;
         background-color: $main-color;
         line-height: 35px;
-        @include medium-typography;
-        color: $dark-main-color;
         box-shadow: inset 0px 6px 5px -6px $dark-main-color;
         i{
             color: $dark-main-color;
-            margin-right: 7px;
+            margin: 0 4px 0 20px;
             font-size: 0.8rem;
+        }
+        #town{
+            width: 120px;
+            border: none;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding-left: 4px;
+            background-color: $main-color;
+            &::placeholder{
+                color: $dark-main-color;
+            }
         }
     }
     .search_discovery{

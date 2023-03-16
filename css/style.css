@@ -137,19 +137,26 @@ footer p a {
 
 .search .search_position {
   text-align: center;
-  margin: 0;
   height: 35px;
   background-color: #E5DEDE;
   line-height: 35px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #5f4b4b;
   box-shadow: inset 0px 6px 5px -6px #5f4b4b;
 }
 .search .search_position i {
   color: #5f4b4b;
-  margin-right: 7px;
+  margin: 0 4px 0 20px;
   font-size: 0.8rem;
+}
+.search .search_position #town {
+  width: 120px;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding-left: 4px;
+  background-color: #E5DEDE;
+}
+.search .search_position #town::placeholder {
+  color: #5f4b4b;
 }
 .search .search_discovery {
   align-items: center;
