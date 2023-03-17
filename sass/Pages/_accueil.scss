@@ -219,6 +219,15 @@
                     }
                 }
             }
+            @include desktop-only{
+                .fa-regular{
+                    &:hover{
+                        & + .fa-solid{
+                            animation: completed 1s ease both;
+                        }
+                    }
+                }
+            }
         }
     }
 }
