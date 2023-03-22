@@ -2,19 +2,22 @@
 
 « Ohmyfood », entreprise proposant la commande de repas en ligne de restaurants gastronomiques pour une clientèle connectée et pressée ; elle souhaite étendre son concept, déjà déployé sur New York, à la ville de Paris avec un site web dynamique.
 
--------------
+---------------
 ## Objectifs 
 **Phase 1**: Développer un site proposant le menu de 4 grands restaurants parisiens. 
+
 **Phase 2** : Permettre la réservation en ligne et la composition de menus.
 
--------------
+---------------
 ## Identité graphique Polices 
 
 **Logo et titres** : Shrikhand 
+
 **Texte** : Roboto 
+
 **Couleurs** : Primaire #9356DC / Secondaire #FF79DA / Tertiaire #99E2D0
 
--------------
+---------------
 ## Technologies 
 
 Le développement doit se faire en CSS, sans JavaScript
@@ -25,7 +28,7 @@ Utilisation de SASS recommandée
 
 Aucun code CSS ne doit être appliqué via un attribut style dans une balise HTML
 
--------------
+---------------
 ## Compatibilité
 
 Le site est développé en utilisant l’approche mobile-first. 
@@ -34,7 +37,7 @@ Sur tablette et desktop, le site doit s’adapter, ces supports ne sont cependan
 
 Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
 
--------------
+---------------
 ## Effets graphiques et animations
 
 Au survol, la couleur de fond des boutons principaux doit légèrement s’éclaircir. L’ombre portée doit également être plus visible. 
