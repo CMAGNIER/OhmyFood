@@ -10,19 +10,24 @@ footer{
         font-size: 0.9rem;
         margin: 10px 0px 15px 0px;
     }
-    p{
-        margin: 10px 0px;
-        line-height: 23px;
-        @include light-typography;
-        i{
-            margin-right: 10px;
-        }
-        .fa-handshake-angle{
-            font-size: 0.6rem;
-        }
-        a{
-            text-decoration: none;
-            color: #FFFFFF;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 0;
+        li{
+            list-style: none;
+            @include light-typography;
+            i{
+                margin-right: 10px;
+            }
+            .fa-handshake-angle{
+                font-size: 0.6rem;
+            }
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+            }
         }
     }
 }
