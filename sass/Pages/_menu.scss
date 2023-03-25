@@ -42,12 +42,10 @@
                     }
                 }
             }
-            @include desktop-only{
-                .fa-regular{
-                    &:hover{
-                        & + .fa-solid{
-                            animation: completed 1s ease both;
-                        }
+            .fa-regular{
+                &:hover{
+                    & + .fa-solid{
+                        animation: completed 1s ease both;
                     }
                 }
             }
@@ -143,12 +141,10 @@
                             margin-left:50px;
                         }
                     }
-                    @include desktop-only{
-                        &:hover{
-                            & > .card_content_dish_price{
-                                transform: translateX(-50px);
-                                margin-left:50px;
-                            }
+                    &:hover{
+                        & > .card_content_dish_price{
+                            transform: translateX(-50px);
+                            margin-left:50px;
                         }
                     }
                     .card_content_dish--select{
@@ -167,11 +163,9 @@
                             transform: translateX(0);
                         }
                     }
-                    @include desktop-only{
-                        &:hover{
-                            & > .card_content_dish--select{
-                                transform: translateX(0);
-                            }
+                    &:hover{
+                        & > .card_content_dish--select{
+                            transform: translateX(0);
                         }
                     }
                     i{
@@ -187,11 +181,9 @@
                             transform: translateX(0) rotate(1turn);
                         }
                     }
-                    @include desktop-only{
-                        &:hover{
-                            & > i{
-                                transform: translateX(0) rotate(1turn);
-                            }
+                    &:hover{
+                        & > i{
+                            transform: translateX(0) rotate(1turn);
                         }
                     }
                 }
