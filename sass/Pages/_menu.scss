@@ -28,6 +28,7 @@
                 position: absolute;
                 right: 33px;
                 top: 35px;
+                cursor: pointer;
             }
             .fa-solid{
                 background: linear-gradient(177deg,$color-primary,$color-secondary);
@@ -51,6 +52,15 @@
             }
         }
         .card_content{
+            &:nth-child(2){
+                animation: appearance 0.4s 0.2s cubic-bezier(.69,.67,.82,.81) both;
+            }
+            &:nth-child(3){
+                animation: appearance 0.4s 0.4s cubic-bezier(.69,.67,.82,.81) both;
+            }
+            &:nth-child(4){
+                animation: appearance 0.4s 0.6s cubic-bezier(.69,.67,.82,.81) both;
+            }
             h3{
                 margin: 30px 15px 0px 15px;
                 font-weight: 200;
@@ -97,18 +107,6 @@
                     @include desktop-only{
                         width: 60%;
                     }
-                    &:nth-child(1){
-                        animation: appearance 0.4s 0.1s cubic-bezier(.69,.67,.82,.81) both;
-                    }
-                    &:nth-child(2){
-                        animation: appearance 0.4s 0.3s cubic-bezier(.69,.67,.82,.81) both;
-                    }
-                    &:nth-child(3){
-                        animation: appearance 0.4s 0.5s cubic-bezier(.69,.67,.82,.81) both;
-                    }
-                    &:nth-child(4){
-                        animation: appearance 0.4s 0.7s cubic-bezier(.69,.67,.82,.81) both;
-                    }
                     .card_content_dish_entitled{
                         display: flex;
                         flex-direction: column;
@@ -153,7 +151,6 @@
                         border-radius: 0px 15px 15px 0px;
                         background-color: #99E2D0;
                         position: absolute;
-                        z-index: -1;
                         right: 0px;
                         transform: translateX(calc(100% + 5px));
                         transition: transform 0.5s ease;

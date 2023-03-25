@@ -105,6 +105,13 @@
             background-color: $light-main-color;
             @include shadow;
             position: relative;
+            transition: all 0.2s ease-in;
+            &:hover{
+                background-color: lighten($color-primary,35%);
+                & > .functioning_content_icon{
+                    color: $color-primary;
+                }
+            }
             @include tablet-only{
                 width: 50%;
                 text-align: center;
@@ -130,10 +137,6 @@
                 margin: 0px 10px;
                 color: lighten($dark-main-color,10%);
                 font-size: 0.9rem;
-                &:hover{
-                    color: $color-primary;
-                    transition: 0.2s ease-in;
-                }
                 @include tablet-only{
                     margin: 0px 3px 0px 0px;
                 }
@@ -205,6 +208,7 @@
                 right: 20px;
                 top: 175px;
                 font-size: 1.1rem;
+                cursor: pointer;
             }
             .fa-solid{
                 background: linear-gradient(177deg,$color-primary,$color-secondary);

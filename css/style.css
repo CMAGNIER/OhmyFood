@@ -232,6 +232,13 @@ footer p a {
   background-color: #f5f2f2;
   box-shadow: 4px 4px 10px -5px #5f4b4b;
   position: relative;
+  transition: all 0.2s ease-in;
+}
+.functioning .functioning_content li:hover {
+  background-color: #f2eafb;
+}
+.functioning .functioning_content li:hover > .functioning_content_icon {
+  color: #9356DC;
 }
 @media screen and (min-width: 768px) {
   .functioning .functioning_content li {
@@ -262,10 +269,6 @@ footer p a {
   margin: 0px 10px;
   color: #7c6262;
   font-size: 0.9rem;
-}
-.functioning .functioning_content li .functioning_content_icon:hover {
-  color: #9356DC;
-  transition: 0.2s ease-in;
 }
 @media screen and (min-width: 768px) {
   .functioning .functioning_content li .functioning_content_icon {
@@ -349,6 +352,7 @@ footer p a {
   right: 20px;
   top: 175px;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 .restaurant-menu .restaurant-menu_content article .fa-solid {
   background: linear-gradient(177deg, #9356DC, #FF79DA);
@@ -400,6 +404,7 @@ footer p a {
   position: absolute;
   right: 33px;
   top: 35px;
+  cursor: pointer;
 }
 .menu .card .card_heading .fa-solid {
   background: linear-gradient(177deg, #9356DC, #FF79DA);
@@ -412,6 +417,15 @@ footer p a {
 }
 .menu .card .card_heading .fa-regular:hover + .fa-solid {
   animation: completed 1s ease both;
+}
+.menu .card .card_content:nth-child(2) {
+  animation: appearance 0.4s 0.2s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
+}
+.menu .card .card_content:nth-child(3) {
+  animation: appearance 0.4s 0.4s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
+}
+.menu .card .card_content:nth-child(4) {
+  animation: appearance 0.4s 0.6s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
 }
 .menu .card .card_content h3 {
   margin: 30px 15px 0px 15px;
@@ -471,18 +485,6 @@ footer p a {
     width: 60%;
   }
 }
-.menu .card .card_content ul .card_content_dish:nth-child(1) {
-  animation: appearance 0.4s 0.1s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
-}
-.menu .card .card_content ul .card_content_dish:nth-child(2) {
-  animation: appearance 0.4s 0.3s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
-}
-.menu .card .card_content ul .card_content_dish:nth-child(3) {
-  animation: appearance 0.4s 0.5s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
-}
-.menu .card .card_content ul .card_content_dish:nth-child(4) {
-  animation: appearance 0.4s 0.7s cubic-bezier(0.69, 0.67, 0.82, 0.81) both;
-}
 .menu .card .card_content ul .card_content_dish .card_content_dish_entitled {
   display: flex;
   flex-direction: column;
@@ -526,7 +528,6 @@ footer p a {
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
   position: absolute;
-  z-index: -1;
   right: 0px;
   transform: translateX(calc(100% + 5px));
   transition: transform 0.5s ease;
