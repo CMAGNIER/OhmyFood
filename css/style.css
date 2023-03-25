@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 1400px;
+  overflow-x: hidden;
   margin: auto;
 }
 
